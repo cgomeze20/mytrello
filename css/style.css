@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+
+:root{
+    --color-primario: #F5F8F8;   /*color de fondo*/
+    --color-secundario: #092F5B; /*color de la columnas*/
+    --color-texto: #000; /*Color de tecto*/
+    --color-encabezado: #bbb ;
+    --color-columnas: #D6DBDF ; /*color columnas*/
+    --color-cards:#FFF;
+    --color-boton:#26e;
+    --icono: rgb(0, 119, 255);
+    --color-search:#000
+}
+
+.dark-theme{
+    --color-primario: #212f3c;   /*color de fondo*/
+    --color-secundario: #2e4054; /*color de la columnas*/
+    --color-texto: #CCC; /*Color de tecto*/
+    --color-encabezado: #212F3C ;
+    --color-columnas:#34495e; /*color columnas*/
+    --color-cards:#2E4053;
+    --color-boton:transparent;
+    --icono:#FEC107;
+    --color-search:#ddd;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    /* background-color: #F2F4F4 ; */
+    background-color: var(--color-primario);
+}
+.contenedor{
+    max-width: 1200px;
+}
+.app{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-flow: column;
+    padding: 20px 20px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: var(--color-secundario);
+    border-radius: 5px;
+}
+header img{
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    flex-basis: 10px;
+}
+
+h1{
+    flex-basis: 90%;
+    color: #fff;
+}
+
+.formulario{
+    /* border: 1px solid red; */
+    padding: 5px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+.formulario input{
+    padding: 10px 10px;
+    outline: none;
+    border: 1px solid #cecece;
+    border-radius: 20px;
+    margin-right: 10px;
+    width: 30%;
+    background-color:var(--color-encabezado);
+    color: var(--color-search);
+}
+.formulario button{
+    padding: 10px 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    /* background-color: #26e; */
+    background-color: var(--color-boton);
+    color: #fff;
+}
+.formulario button:active{
+    transform: scale(0.92);
+}
+h3{
+    width: 100%;
+    background-color: var(--color-encabezado);
+    border-radius: 4px;
+    margin: 5px 0;
+    padding: 5px 0;
+    color: var(--color-texto);
+}
+.columns{
+    display: flex;
+    flex: 1;
+    max-width:100%;
+    height: 200px;
+    justify-content: space-between;
+}
+
+
+.columns .dropzone{
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    text-align: center;
+
+
+    width: 100%;
+    min-width: 250px;
+    max-width: 350px;
+    height: 100%;
+    min-height: 150px;
+
+    /* background-color: #E5E8E8 ; */
+    background-color: var(--color-columnas);
+    margin: 0 15px;
+    padding: 8px;
+    transition: all 0.2s linear;
+    border-radius: 10px;
+}
+
+.columns .dropzone .item{
+    background-color: var(--color-cards);
+    border-radius: 8px;
+    padding: 25px 20px;
+    text-align: center;
+    margin: 4px 0px;
+    cursor: move;
+    color: #B2BABB ;
+}
+
+.item:active{
+    transform: rotate(3deg);
+}
+.invisible{
+    display: none;
+}
+.fill{
+    background-color: var(--color-cards);
+    border-radius: 8px;
+    padding: 5px 20px;
+    text-align: center;
+    margin: 4px 0px;
+    cursor: move;
+    display: block;
+    color: #B2BABB ;
+    
+}
+.fill:active{
+    transform: rotate(3deg);
+}
+
+
+.trash{
+    font-size: 12px;
+    font-weight: bolder;
+    color: #ccc;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+.trash:hover{
+    background-color: var(--color-columnas);
+}
+.btnDark{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.btnDark i{
+    font-size: 20px;
+    color: var(--icono);
+    background-color: transparent;
+    cursor: pointer;
+}
